@@ -14,15 +14,16 @@ struct CardView: View {
     let image: String
     let name: String
     let description: String
+    let colours: [Color]
     
-    let destination: any View
+    //let destination: any View
     
     var body: some View {
         ZStack {
                 
             RoundedRectangle(cornerRadius: 20)
                 .foregroundStyle(
-                    LinearGradient(colors: [.colorBlueberryLight, .colorBlueberryDark], startPoint: .top, endPoint: .bottom)
+                    LinearGradient(colors: colours, startPoint: .top, endPoint: .bottom)
                 )
                 .frame(width: 350, height: 700)
             
@@ -61,5 +62,5 @@ struct CardView: View {
 }
 
 #Preview {
-    CardView(image: "blueberry", name: "Blueberry", description: "Blueberries are sweet, nutiotious and\nwildly popular fruit all over the world.", destination: ContentView())
+    CardView(image: "blueberry", name: "Blueberry", description: "Blueberries are sweet, nutiotious and\nwildly popular fruit all over the world.", colours: [.colorBlueberryLight, .colorBlueberryDark])
 }

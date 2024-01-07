@@ -13,6 +13,7 @@
 		4FB4480E2B4AE3ED009F47B0 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4FB4480D2B4AE3ED009F47B0 /* Preview Assets.xcassets */; };
 		4FB448152B4AE781009F47B0 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FB448142B4AE781009F47B0 /* CardView.swift */; };
 		4FB448192B4AEE0E009F47B0 /* StartButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FB448182B4AEE0E009F47B0 /* StartButtonView.swift */; };
+		4FB4481B2B4AF2CA009F47B0 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FB4481A2B4AF2CA009F47B0 /* OnboardingView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +24,7 @@
 		4FB4480D2B4AE3ED009F47B0 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		4FB448142B4AE781009F47B0 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		4FB448182B4AEE0E009F47B0 /* StartButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartButtonView.swift; sourceTree = "<group>"; };
+		4FB4481A2B4AF2CA009F47B0 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +59,7 @@
 			children = (
 				4FB448062B4AE3EA009F47B0 /* fructUsApp.swift */,
 				4FB448082B4AE3EA009F47B0 /* ContentView.swift */,
+				4FB4481A2B4AF2CA009F47B0 /* OnboardingView.swift */,
 				4FB448162B4AEB94009F47B0 /* View */,
 				4FB4480A2B4AE3ED009F47B0 /* Assets.xcassets */,
 				4FB4480C2B4AE3ED009F47B0 /* Preview Content */,
@@ -154,6 +157,7 @@
 				4FB448092B4AE3EA009F47B0 /* ContentView.swift in Sources */,
 				4FB448192B4AEE0E009F47B0 /* StartButtonView.swift in Sources */,
 				4FB448152B4AE781009F47B0 /* CardView.swift in Sources */,
+				4FB4481B2B4AF2CA009F47B0 /* OnboardingView.swift in Sources */,
 				4FB448072B4AE3EA009F47B0 /* fructUsApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
