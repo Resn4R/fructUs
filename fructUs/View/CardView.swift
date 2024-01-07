@@ -24,7 +24,7 @@ struct CardView: View {
                 .foregroundStyle(
                     LinearGradient(colors: [.colorBlueberryLight, .colorBlueberryDark], startPoint: .top, endPoint: .bottom)
                 )
-                .frame(width: 350, height: 750)
+                .frame(width: 350, height: 700)
             
             VStack {
                 Section {
