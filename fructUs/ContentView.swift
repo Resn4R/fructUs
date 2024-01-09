@@ -11,8 +11,10 @@ struct ContentView: View {
     var body: some View {
         NavigationStack {
             List(fruitData) { fruit in
-                ListView(fruit: fruit)
-                    .padding(.vertical, 4)
+                NavigationLink(destination: FruitDetailView(fruit: fruit)) {
+                    ListView(fruit: fruit)
+                        .padding(.vertical, 4)
+                }
             }
             .navigationTitle("Fruits")
         }
