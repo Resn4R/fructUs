@@ -11,25 +11,21 @@ struct CardView: View {
     
     @State private var isAnimating = false
     
-    let image: String
-    let name: String
-    let description: String
-    let colours: [Color]
+    var fruit: Fruit
     
-    //let destination: any View
     
     var body: some View {
         ZStack {
                 
             RoundedRectangle(cornerRadius: 20)
                 .foregroundStyle(
-                    LinearGradient(colors: colours, startPoint: .top, endPoint: .bottom)
+                    LinearGradient(colors: fruit.gradientColors, startPoint: .top, endPoint: .bottom)
                 )
                 .frame(width: 350, height: 700)
             
             VStack {
                 Section {
-                    Image(image)
+                    Image(fruit.image)
                         .resizable()
                         .scaledToFit()
                         .frame(width: 300)
@@ -37,13 +33,15 @@ struct CardView: View {
                         .padding(.bottom, 30)
                     
                     
-                    Text(name)
+                    Text(fruit.title)
                         .foregroundStyle(.white)
                         .font(.system(size: 35, weight: .bold, design: .rounded))
                         .padding(.bottom, 15)
                     
-                    Text(description)
+                    Text(fruit.headline)
+                        .font(.system(size: 21))
                         .foregroundStyle(.white)
+                        .frame(width: 300)
                         .multilineTextAlignment(.center)
                         .padding(.bottom, 40)
                 }
@@ -62,5 +60,5 @@ struct CardView: View {
 }
 
 #Preview {
-    CardView(image: "blueberry", name: "Blueberry", description: "Blueberries are sweet, nutiotious and\nwildly popular fruit all over the world.", colours: [.colorBlueberryLight, .colorBlueberryDark])
+    CardView(fruit: fruitData[0])
 }
