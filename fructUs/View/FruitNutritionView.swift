@@ -15,26 +15,25 @@ struct FruitNutritionView: View {
     var body: some View {
         GroupBox() {
             
-            DisclosureGroup("Nutritional values for 100g") {
+            DisclosureGroup {
                 ForEach(0..<nutrients.count) { item in
                     
                     Divider().padding(.vertical, 2)
                     
                     HStack {
-                        Group {
-                            Image(systemName: "info.circle")
-                            Text(nutrients[item])
-                        }
-                        .foregroundStyle(fruit.gradientColors[1])
-                        .bold()
+                        Text(nutrients[item])
+                            .foregroundStyle(fruit.gradientColors[1])
+                            .bold()
 
                         Spacer(minLength: 25)
                         
                         Text(fruit.nutrition[item])
                             .multilineTextAlignment(.trailing)
-
                     }
                 }
+                
+            } label: {
+                Label("Nutritional values for 100g", systemImage: "info.circle")
             }
             
         }
