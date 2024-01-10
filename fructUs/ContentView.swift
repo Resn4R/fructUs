@@ -31,7 +31,9 @@ struct ContentView: View {
             }
             .sheet(isPresented: $isSheetShowing, content: {
                 SettingsView()
+                    .presentationDetents([.medium, .large])
             })
+            
         }
     }
 }
