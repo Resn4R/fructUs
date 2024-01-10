@@ -11,7 +11,7 @@ struct CardView: View {
     
     @State private var isAnimating = false
     
-    var fruit: Fruit
+    let fruit: Fruit
     
     
     var body: some View {

@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ListView: View {
     
-    var fruit: Fruit
+    let fruit: Fruit
     
     var body: some View {
         HStack {
