@@ -43,7 +43,7 @@ struct FruitDetailView: View {
                 }
                 .navigationTitle(fruit.title)
                 .navigationBarTitleDisplayMode(.inline)
-                .toolbar(.hidden)
+                //.toolbar(.hidden)
             }
             .ignoresSafeArea(edges: .top)
         }

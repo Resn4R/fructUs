@@ -10,12 +10,20 @@ import SwiftUI
 @main
 struct fructUsApp: App {
     
-    @AppStorage("isOnboarding") var isOnboarding = true
+    @AppStorage("isOnboarding") var isOnboarding: Bool?
     var body: some Scene {
         WindowGroup {
             
-            if isOnboarding { OnboardingView() }
-            else { ContentView() }
+          ZStack {
+                if isOnboarding == true {
+                        OnboardingView()
+                            .transition( AnyTransition.opacity.animation(.easeInOut(duration: 0.3)) )
+                }
+                else {
+                    ContentView()
+                        .transition( AnyTransition.scale.animation(.easeInOut(duration: 0.3)) )
+                }
+            }
             
         }
     }

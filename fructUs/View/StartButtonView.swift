@@ -8,11 +8,12 @@
 import SwiftUI
 
 struct StartButtonView: View {
-    @AppStorage("isOnboarding") var isOnboarding: Bool?
+    
+    let fruit: Fruit
     
     var body: some View {
-        Button {
-            isOnboarding = false 
+        NavigationLink {
+            FruitDetailView(fruit: fruit)
         } label: {
             HStack {
                 Text("Start")
@@ -27,10 +28,11 @@ struct StartButtonView: View {
                 Capsule().strokeBorder(Color.white, lineWidth: 1.25)
             )
         }
+        
     }
 }
 
 #Preview {
-    StartButtonView()
+    StartButtonView(fruit: fruitData[0])
         .preferredColorScheme(.dark)
 }

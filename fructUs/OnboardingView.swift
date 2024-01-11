@@ -8,17 +8,29 @@
 import SwiftUI
 
 struct OnboardingView: View {
+    
+    @AppStorage("isOnboarding") var isOnboarding: Bool?
 
     var body: some View {
-        TabView {
-            ForEach(fruitData) { fruit in
-                TabView {
+        NavigationStack {
+            TabView {
+                ForEach(fruitData) { fruit in
                     CardView(fruit: fruit)
                 }
             }
+            .tabViewStyle(.page)
+            .padding(.vertical, 20)
+            
+            .toolbar {
+                ToolbarItem(placement: .topBarLeading) {
+                    Button {
+                        isOnboarding = false
+                    } label: {
+                        Image(systemName: "list.bullet")
+                    }
+                }
+            }
         }
-        .tabViewStyle(.page)
-        .padding(.vertical, 20)
     }
 }
 

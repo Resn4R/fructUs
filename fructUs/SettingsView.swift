@@ -11,6 +11,7 @@ struct SettingsView: View {
     
     @Environment(\.dismiss) var dismiss
     
+    
     var body: some View {
         NavigationStack {
             ScrollView(.vertical, showsIndicators: false) {
@@ -91,6 +92,7 @@ struct SettingsView: View {
             }
             .navigationTitle("Settings")
             .navigationBarTitleDisplayMode(.large)
+            
             .toolbar {
                 ToolbarItem(placement: .topBarTrailing) {
                     Button{

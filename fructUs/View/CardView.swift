@@ -21,7 +21,7 @@ struct CardView: View {
                 .foregroundStyle(
                     LinearGradient(colors: fruit.gradientColors, startPoint: .top, endPoint: .bottom)
                 )
-                .frame(width: 350, height: 700)
+                .frame(width: 350, height: 680)
             
             VStack {
                 Section {
@@ -47,7 +47,7 @@ struct CardView: View {
                 }
                 .shadow(radius: 8, x: 6, y: 8)
                 
-                StartButtonView()
+                StartButtonView(fruit: fruit)
             
             }
         }

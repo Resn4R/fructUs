@@ -10,6 +10,7 @@ import SwiftUI
 struct ContentView: View {
     
     @State private var isSheetShowing = false
+    @AppStorage("isOnboarding") var isOnboarding: Bool?
     
     var body: some View {
         NavigationStack {
@@ -28,11 +29,18 @@ struct ContentView: View {
                         Image(systemName: "slider.horizontal.3")
                     }
                 }
+                ToolbarItem(placement: .topBarLeading) {
+                    Button {
+                        isOnboarding = true
+                    } label: {
+                        Image(systemName: "rectangle.portrait.on.rectangle.portrait")
+                    }
+                }
             }
-            .sheet(isPresented: $isSheetShowing, content: {
+            .sheet(isPresented: $isSheetShowing) {
                 SettingsView()
                     .presentationDetents([.medium, .large])
-            })
+            }
             
         }
     }
